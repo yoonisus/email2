@@ -1,0 +1,12 @@
+<div class="container" style="width:600px; height:500px; top: 50%; left: 50%; margin: -250px 0px 0px -300px; position:absolute; background-color: #C9EEEA; ">
+  <div style="display:table-cell; width:600px; height:500px; text-align:center; vertical-align: middle; ">
+        <h1>List</h1>
+        <% @every_post.each do |p| %>
+        Title : <%= p.title %> <br>
+        Content : <%= p.content %> <br>
+        Time : <%= p.created_at %> 
+        <hr style="border-color: gray">
+        <% end %>
+        <a href="/" style="margin-top:20px"><button type="submit" class="btn btn-default" >Write</button></a>
+   </div>
+</div> 
