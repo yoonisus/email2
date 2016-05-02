@@ -4,8 +4,10 @@
         <% @every_post.each do |p| %>
         Title : <%= p.title %> <br>
         Content : <%= p.content %> <br>
-        Time : <%= p.created_at %> 
-        <hr style="border-color: gray">
+        Time : <%= p.created_at %>
+        <a href="/update_view/<%= p.id %>">[edit]</a>
+        <a href="/destroy/<%= p.id %>">[delete]</a>
+        <hr style="border-color: gray"> 
         <% end %>
         <a href="/" style="margin-top:20px"><button type="submit" class="btn btn-default" >Write</button></a>
    </div>

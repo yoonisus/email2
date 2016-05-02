@@ -3,7 +3,9 @@ Rails.application.routes.draw do
   get '/' => "email#index"
   post '/write' => "email#write"
   get '/list' => "email#list"
-  
+  get 'destroy/:post_id'=> "email#destroy"
+  get 'update_view/:post_id' => "email#update_view"
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

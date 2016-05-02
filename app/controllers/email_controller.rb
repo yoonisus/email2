@@ -36,4 +36,16 @@ class EmailController < ApplicationController
         @every_post = Post.all.order("id desc")
     end
     
+    def update_view
+        @one_post = Post.find(params[:post_id])
+        
+    end
+    
+    def destroy
+        @one_post = Post.find(params[:post_id])
+        @one_post.destroy
+        
+        redirect_to "/list"
+    end
+    
 end
