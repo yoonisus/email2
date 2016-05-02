@@ -41,6 +41,15 @@ class EmailController < ApplicationController
         
     end
     
+    def siljae
+        @one_post = Post.find(params[:post_id])
+        @one_post.title = params[:title]
+        @one_post.content = params[:content]
+        @one_post.save
+        
+        redirect_to "/list"
+    end
+    
     def destroy
         @one_post = Post.find(params[:post_id])
         @one_post.destroy

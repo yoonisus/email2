@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   get '/list' => "email#list"
   get 'destroy/:post_id'=> "email#destroy"
   get 'update_view/:post_id' => "email#update_view"
+  post 'siljae_update/:post_id' => "email#siljae"
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
